@@ -1,0 +1,23 @@
+To run the program, from the current folder where the scripts are present, the following command is to be issued in the terminal.
+
+Apart from standard python libraries, this project needs PyWavelets library (pywt) to run. 
+Please install it before running project. 
+
+To install PyWavelets open shell prompt and type pip install PyWavelets or easy_install PyWavelets.
+
+Alternately, to build and install PyWavelets from source, unzip the compressed source file present in sources directory, navigate to PyWavelets source code directory and type python setup.py install.
+In order to build PyWavelets from source, a working C compiler (GCC or MSVC) and a recent version of Cython is required.
+More information on PyWavelets installation can be found at http://www.pybytes.com/pywavelets/index.html
+
+To run the index.py file which creates the index files hsv.csv, texture.csv and btree.csv
+> python  index.py -c hsv.csv -t texture.csv -b btree.csv -d <full path of dataset>
+
+To run the rank.py file which ranks images in the given dataset with respect to the query image
+(rank.py file also copies the high ranking 15 images to the result directory)
+> py rank.py -c hsv.csv -t texture.csv -b btree.csv -q <full path of query image> -d <full path of dataset>
+
+Dataset and query images used for testing the program are available in data folder.
+
+result folder needs to be present in the current directory (eg. code) for the program to write output files to result directory.
+
+
